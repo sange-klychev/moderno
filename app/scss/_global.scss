@@ -26,6 +26,7 @@ body{
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 .wrapper{
     display: flex;
@@ -49,12 +50,6 @@ body{
     padding: 0 30px;
 }
 
-
-@media (max-width: 720px){
-    .container-fluid{
-        padding: 0 15px;
-    }
-}
 .page-content{
     background-color: $gray;
 }
@@ -98,5 +93,17 @@ body{
         a{
             color: #b0bec5;
         }
+    }
+}
+.angle-right{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        content: "\f105";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        color: $green;
+        font-size: 14px;
     }
 }
