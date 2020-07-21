@@ -306,6 +306,103 @@
 
 // end header
 
+//start modal
+
+#modal{
+    background-color: $green;
+    max-width: 730px;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.login__wrapper{
+    form{
+        max-width: 400px;
+        margin: 0 auto;
+        label{
+            position: relative;
+            &::after{
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: 14px;
+                left: 18px;
+                color: #fff;
+                top: 9px;
+            }
+        }
+        input{
+            height: 43px;
+            margin-bottom: 8px;
+            border: none;
+            background-color: #76ae36;
+            color: #fff;
+            font-size: 14px;
+            padding-left: 40px;
+            display: block;
+            width: 100%;
+            &::placeholder{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+        button{
+            margin-top: 19px;
+            padding: 18px 0 16px;
+            background-color: #fff;
+            width: 140px;
+            text-transform: uppercase;
+            border: none;
+            margin-right: 10px;
+            @include f700;
+            text-align: center;
+            color: #000;
+            box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+        }
+    }
+}
+.login__label-name::after{
+    content: "\f007";
+}
+.login__label-pass::after{
+    content: "\f023";
+}
+.login__title{
+    text-align: center;
+    text-transform: uppercase;
+    @include f500;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.lost-pass{
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.creat-acc{
+    margin-top: 19px;
+    padding: 15px 0 15px 28px;
+    width: 245px;
+    text-align: center;
+    background-color: #76ae36;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    &::before{
+        content: "\f044";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 35px;
+        top: 15px;
+    }
+}
+.fancybox-button svg{
+    color: #fff;
+}
+
+//end modal
+
 // start search
 
 .search{
@@ -1136,9 +1233,405 @@ button.icon-unsorted{
 
 //end products-page
 
+//start product-one
+.product-one{
+    padding-bottom: 100px;
+    &__inner{
+        display: flex;
+    }
+    &__content{
+        margin-right: 31px;
+        max-width: 870px;
+    }
+    &__images-inner{
+        background-color: #fff;
+        border: 1px solid #dcdcdc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+    }
+    &__images{
+        max-width: 829px;
+        width: 100%;
+        height: 422px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__title{
+        @include f500;
+        font-size: 30px;
+        color: $bg-blue;
+        line-height: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    &__text{
+        font-size: 16px;
+        color: #707070;
+        margin-bottom: 35px;
+        margin-top: 20px;
+    }
+}
+.product-one__box{
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.product-one__link{
+    a{
+        padding: 16px 8px;
+        width: 150px;
+        color: $gray;
+        font-size: 14px;
+    }
+    a + a{
+        margin-left: 20px;
+    }
+}
+.link-live{
+    background-color: $red;
+}
+.link-screenshot{
+    background-color: #455a61;
+}
+.link-documentation{
+    background-color: $green;
+}
+.product-one__social{
+    a{
+        width: 54px;
+        height: 50px;
+        position: relative;
+        & + a{
+            margin-left: 3px;
+        }
+        &::before{
+            font-size: 18px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+.icon-facebook{
+    background-color: #6370b6;
+}
+.icon-twitter{
+    background-color: #64b5f6;
+}
+.icon-linkedin{
+    background-color: #4f71ce;
+}
+.icon-pinterest-p{
+    background-color: #d32f2f;
+}
+.product-one__tabs{
+    margin-bottom: 55px;
+}
+.tabs{
+    display: flex;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    .tab{
+        width: 100%;
+        background-color: #fff;
+        font-size: 16px;
+        color: #70838d;
+        padding: 20px 0;
+        cursor: pointer;
+        & + .tab{
+            border-left: 1px solid #d7d7d7;
+        }
+    }
+}
+.tab_content{
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-top: none;
+    padding: 30px 30px 50px;
+}
+.tab-item{
+    display: none;
+    &:first-child{
+        display: block;
+    }
+}
+.tab-item__list{
+    line-height: 36px;
+    font-size: 16px;
+    color: #707070;
+    column-count: 2;
+    column-gap: 25px;
+    li{
+        max-width: 270px;
+        width: 100%;
+    }
+}
+.product-one__more-title{
+    font-size: 18px;
+    color: $bg-blue;
+    @include f500;
+    padding: 18px 25px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 28px;
+}
+.product-one__more-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.productmini{
+    margin-bottom: 27px;
+    display: flex;
+    height: 90px;
+    max-width: 270px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    background-color: #fff;
+    &__images{
+        width: 100px;
+        height: 90px;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__name{
+        @include f500;
+        font-size: 14px;
+        color: $bg-blue;
+    }
+    &__theme{
+        color: $green;
+        font-size: 12px;
+    }
+    &__price{
+        color: $bg-blue;
+        font-size: 18px;
+        @include f700;
+    }
+}
+.price__box{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.price__product{
+    font-size: 22px;
+    @include f500;
+    color: $red;
+}
+.product__price{
+    button{
+        margin-bottom: 7px;
+        box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+        border: none;
+        background-color: $text;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif !important;
+        text-align: center;
+        display: block;
+        padding: 17px 5px 15px;
+        width: 100%;
+        cursor: pointer;
+        &::before{
+            font-weight: 400;
+            font-family: 'icomoon';
+            padding-right: 8px;
+        }
+    }
+    .icon-shopping-cart{
+        background-color: $green;
+    }
+    .icon-heart-o{
+        background-color: #42a5f5;
+    }
+}
+.product-author__box{
+    padding: 20px 0;
+    display: flex;
+}
+.author__avatar{
+    margin-right: 14px;
+}
+.author__name{
+    font-size: 18px;
+    color: $bg-blue;
+    margin-bottom: 2px;
+}
+.author__info-link{
+    font-size: 13px;
+    color: #707070;
+    border: 1px solid #d6d6d6;
+    padding: 6px 9px 5px;
+}
+.author__awards-list{
+    li{
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        & + li{
+            margin-left: 4px;
+        }
+        &::before{
+            position: absolute;
+            top: 6px;
+            left: 0;
+            right: 0;
+        }
+    }
+    .icon-meh-o{
+        background-image: url(../images/awards/award-orange.png);
+        width: 34px;
+        height: 37px;
+    }
+    .icon-pagelines{
+        background-image: url(../images/awards/award-red.png);
+        width: 34px;
+        height: 37px;
+    }
+    .icon-flash{
+        background-image: url(../images/awards/award-blue.png);
+        width: 34px;
+        height: 37px;
+    }
+    .icon-foursquare{
+        background-image: url(../images/awards/award-green.png);
+        width: 34px;
+        height: 37px;
+    }
+    .icon-yen{
+        background-image: url(../images/awards/award-gray.png);
+        width: 34px;
+        height: 37px;
+    }
+}
+.aside-item__sales{
+    padding-top: 23px;
+    font-size: 16px;
+    @include f300;
+    color: #707070;
+    span{
+        @include f700;
+        font-size: 20px;
+        color: #263238;
+        &::before{
+            content: "\f07a";
+            color: #a6b5bb;
+            padding-right: 20px;
+            font-family: 'icomoon';
+        }
+    }
+}
+.aside-item.sales-number{
+    padding-bottom: 25px;
+}
+.information__line{
+    font-size: 14px;
+    color: #70838d;
+    margin-top: 20px;
+    line-height: 18px;
+    span{
+        color: $bg-blue;
+        @include f500;
+    }
+}
 
 
+//end product-one
 
+//start page-404
+
+.page-404__wrapper,
+.about__wrapper{
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    margin-bottom: 150px;
+}
+.page-404__head,
+.about__head{
+    font-size: 24px;
+    color: #444;
+    @include f500;
+    padding: 23px 27px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.page-404__inner{
+    background-color: $green;
+    text-align: center;
+    color: #fff;
+}
+.page-404__404{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 300px;
+    padding-top: 70px;
+    line-height: 300px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after{
+        position: absolute;
+        content: "";
+        background-image: url(../images/page-404.png);
+        width: 160px;
+        height: 300px;
+        margin-left: 20px;
+    }
+}
+.page-404__title{
+    margin-bottom: 30px;
+    @include f300;
+    font-size: 30px;
+}
+.page-404__text{
+    font-size: 18px;
+    max-width: 501px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.page-404__link{
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 20px 30px 16px;
+    border-radius: 4px;
+    margin-bottom: 100px;
+}
+
+//end page-404
+
+//start about
+
+.about__inner{
+    padding: 0 50px;
+}
+.about__box{
+    h3{
+        @include f700;
+        font-size: 24px;
+        color: #444;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+}
+
+//end about
 
 
 
