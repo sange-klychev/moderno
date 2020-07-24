@@ -1422,6 +1422,22 @@ button.icon-unsorted{
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    .jq-selectbox{
+        width: 95px;
+    }
+    .jq-selectbox__select{
+        height: 27px;
+        line-height: 26px;
+        padding: 0 18px 0 10px;
+    }
+    .jq-selectbox__trigger-arrow{
+        right: 16px;
+        line-height: 26px;
+        color: $green;
+    }
+    .jq-selectbox__select-text{
+        width: 100%;
+    }
 }
 .price__product{
     font-size: 22px;
@@ -1751,6 +1767,7 @@ button.icon-unsorted{
 }
 
 //end contacts
+
 //start settings
 
 .settings{
@@ -1833,7 +1850,7 @@ button.icon-unsorted{
     align-items: center;
     label{
         color: #444;
-        width: 260px;
+        min-width: 260px;
     }
     input{
         max-width: 540px;
@@ -2038,6 +2055,137 @@ button.icon-unsorted{
 }
 
 //end profile
+
+//start upload
+
+.upload__inner{
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+    &-title{
+        font-size: 24px;
+        @include f500;
+        color: $bg-blue;
+        padding: 16px 35px 18px;
+        border-bottom: 1px solid #d7d7d7;
+        margin-bottom: 40px;
+    }
+    &-content{
+        margin-bottom: 30px;
+        padding-left: 45px;
+        padding-right: 50px;
+    }
+    .upload-line{
+        margin-bottom: 25px;
+        display: flex;
+        label{
+            min-width: 175px;
+            padding-right: 15px;
+            color: #444;
+            padding-top: 5px;
+            span{
+                color: $green;
+            }
+            &::placeholder{
+                color: #707070;
+            }
+        }
+        select,
+        input,
+        textarea{
+            width: 100%;
+            display: block;
+            border: 1px solid #d7d7d7;
+            height: 40px;
+            background-color: #f9f9f9;
+            padding: 0 18px;
+        }
+        textarea{
+            resize: none;
+            height: 150px;
+            padding: 8px 18px;
+        }
+    }
+    input[type='file']{
+        outline: none;
+    }
+    button{
+        color: #fff;
+        border: none;
+        background-color: $green;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+    }
+}
+.jq-file{
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+}
+.jq-file__name{
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    height: 40px;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+    margin-left: 100px;
+    border-bottom-color: transparent;
+}
+.jq-file__browse{
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #444;
+    top: 5px;
+    right: auto;
+    left: 9px;
+    text-shadow: none;
+}
+.jq-selectbox{
+    width: 100%;
+}
+.jq-selectbox__select{
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    text-shadow: none;
+    box-shadow: none;
+    color: #707070;
+    font-family: 'Roboto-Regular', sans-serif;
+    line-height: 40px;
+    height: 40px;
+}
+.jq-selectbox__trigger-arrow{
+    font-size: 15px;
+    right: 20px;
+    line-height: 40px;
+    top: 0;
+    border: none;
+    &::before{
+        content: "\f0d7";
+        font-family: 'icomoon';    
+    }
+}
+.jq-selectbox__trigger{
+    border-left: none;
+}
+
+//end upload
 
 
 @import 'media';
