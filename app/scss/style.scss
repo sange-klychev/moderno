@@ -314,6 +314,7 @@
     width: 100%;
     padding-top: 90px;
     padding-bottom: 100px;
+    display: none;
 }
 .login__wrapper{
     form{
@@ -473,6 +474,10 @@
 .products{
     padding: 110px 0;
     background-color: $gray;
+    &__wrapper{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
     &__inner-btn{
         text-align: center;
         margin-bottom: 60px;
@@ -495,8 +500,13 @@
 }
 .products__inner-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
+.products .products__item{
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .products__item{
     max-width: 442px;
@@ -565,8 +575,8 @@
         }
     }
     &-star span{
-            color: $bg-blue;
-        }
+        color: $bg-blue;
+    }
 }
 .products__bottom-btn{
     text-align: center;
@@ -592,6 +602,10 @@
 
 .products-slider{
     padding: 110px 0 120px;
+    &__wrapper{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
 }
 .slick-dots{
     text-align: center;
@@ -1065,12 +1079,14 @@
     width: 100%;
     .products-page__items{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin-bottom: 30px;
         flex-wrap: wrap;
+        margin-left: -30px;
     }
     .products__item{
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
+        margin-left: 30px;
         transition: all .5s;
         &-img{
             min-height: 180px;
@@ -1194,6 +1210,7 @@ button.icon-unsorted{
 .products__item{
     &.list{
         max-width: 100%;
+        flex-basis: 100%;
         .products__item-img{
             width: 240px;
             float: left;
@@ -1828,11 +1845,8 @@ button.icon-unsorted{
 }
 .page-box__content{
     padding: 30px 35px 80px;
-    position: relative;
     button{
-        position: absolute;
-        bottom: 34px;
-        left: 293px;
+        margin-left: 260px;
         width: 110px;
         height: 45px;
         background-color: $green;
@@ -1842,6 +1856,9 @@ button.icon-unsorted{
         padding: 0 10px;
         cursor: pointer;
         border: none;
+    }
+    .jq-selectbox{
+        max-width: 540px;
     }
 }
 .settings__line{
@@ -2200,6 +2217,7 @@ button.icon-unsorted{
     background-color: #fff;
     border: 1px solid #dedede;
     height: 100%;
+    margin-right: 15px;
 }
 .withdrawals__title{
     font-size: 24px;
