@@ -37,7 +37,8 @@ gulp.task('script', function (){
         'node_modules/rateyo/src/jquery.rateyo.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.js'
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+        'node_modules/wow.js/dist/wow.js'
     ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
@@ -53,7 +54,8 @@ gulp.task('style', function () {
         'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+        'node_modules/animate.css/animate.css'
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())

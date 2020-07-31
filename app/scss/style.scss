@@ -6,6 +6,10 @@
 
 .header{
     background-color: #fff;
+    &__top{
+        position: relative;
+        overflow-x: hidden;
+    }
 }
 .header__top-inner{
     display: flex;
@@ -507,6 +511,25 @@
 .products .products__item{
     flex-basis: calc(25% - 30px);
     margin-left: 30px;
+    animation-duration: 1s;
+}
+.products__item{
+    &:nth-child(1),
+    &:nth-child(5){
+        animation-delay: .3s;
+    }
+    &:nth-child(2),
+    &:nth-child(6){
+        animation-delay: .5s;
+    }
+    &:nth-child(3),
+    &:nth-child(7){
+        animation-delay: .7s;
+    }
+    &:nth-child(4),
+    &:nth-child(8){
+        animation-delay: .9s;
+    }
 }
 .products__item{
     max-width: 442px;

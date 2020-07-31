@@ -1,4 +1,15 @@
 $(function(){
+
+    wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset: 150,          // default
+            mobile: true,       // default
+            live: true,        // default
+        }
+    )
+    wow.init();
     
     $('.rate-star').rateYo({
         rating: 5,
@@ -77,5 +88,4 @@ $(function(){
     var mixer = mixitup('.products__inner-box');
     }
 
-    
 });
